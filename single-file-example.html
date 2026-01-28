@@ -44,12 +44,54 @@
         }
 
 
+      function AboutPage() {
+          return (
+            <>
+              <h1>About</h1>
+              <p>melosta5915@conestogac.on.ca<br /> 8885915 </p>
+            </>
+          );
+        }
+
+
+      function Profile() {
+          return (
+            <img 
+              className="avatar"
+            />
+          );
+        }
+
+
       
+     function Greeting() {
+          const userName = 'melosta5915';
+          
+          return (
+            <h1>Welcome, {userName}!</h1>
+          );
+        }
 
 
+      function ProductList() {
+          const products = [
+            { title: 'Cabbage', id: 1 },
+            { title: 'Garlic', id: 2 },
+            { title: 'Apple', id: 3 }
+          ];
 
-      
+          const listItems = products.map(product =>
+            <li key={product.id}>
+              {product.title}
+            </li>
+          );
 
+          return <ul>{listItems}</ul>;
+        }
+
+  
+      ReactDOM.render(<MyApp />, document.getElementById('root'));
+</script>
     </script>
   </body>
 </html>
